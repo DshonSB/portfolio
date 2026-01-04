@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daron O'Brien - Marketing Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes gradient { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        @keyframes pulse-slow { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.1); } }
+        @keyframes bounce-slow { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-10px); } }
+        .animate-gradient { background-size: 200% 200%; animation: gradient 3s ease infinite; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+        .animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
+        .grid-background { background-image: linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px); background-size: 50px 50px; width: 100%; height: 100%; }
+        .contact-link { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 9999px; transition: all 0.3s ease; }
+        .contact-link:hover { background: rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.6); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2); }
+        .card { background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%); backdrop-filter: blur(20px); border-radius: 1rem; border: 1px solid rgba(71, 85, 105, 0.5); transition: all 0.5s ease; }
+        .card:hover { border-color: rgba(59, 130, 246, 0.8); box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3); transform: translateY(-5px); }
+        .skill-tag { padding: 1rem 2rem; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%); border: 1px solid rgba(59, 130, 246, 0.5); border-radius: 9999px; font-weight: 600; transition: all 0.3s ease; }
+        .skill-tag:hover { transform: scale(1.15) rotate(2deg); border-color: rgba(59, 130, 246, 1); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4); }
+        #cursor-follower { position: fixed; width: 16px; height: 16px; background: #3b82f6; border-radius: 50%; pointer-events: none; z-index: 9999; mix-blend-mode: screen; }
+    </style>
+</head>
+<body class="bg-slate-950 text-white overflow-x-hidden">
+    <div id="cursor-follower"></div>
+
+    <div class="fixed inset-0 pointer-events-none" id="bg-layer-1">
+        <div class="absolute top-20 left-20 w-96 h-96 bg-blue-600/30 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute top-40 right-40 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1s;"></div>
+    </div>
+
+    <section class="min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 opacity-10"><div class="grid-background"></div></div>
+        
+        <div class="container mx-auto px-6 z-10 text-center relative">
+            <div class="mb-6 inline-block">
+                <div class="w-32 h-32 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-5xl font-bold animate-float">DO</div>
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-gradient">
+                DARON O'BRIEN
+            </h1>
+            <p class="text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-8">
+                Marketing Specialist
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="tel:+3232709810" class="contact-link">+323-270-9810</a>
+                <a href="mailto:dshonobrien@gmail.com" class="contact-link">dshonobrien@gmail.com</a>
+                <span class="contact-link">Los Angeles, CA</span>
+                <a href="https://daronobrien.xyz" target="_blank" class="contact-link">daronobrien.xyz</a>
+            </div>
+
+            <div class="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-xl font-semibold">
+                13+ Years of Excellence
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 relative" id="profile">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-8 flex items-center gap-4">
+                <div class="w-3 h-16 bg-gradient-to-b from-blue-400 to-purple-400"></div>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Profile</span>
+            </h2>
+            <div class="card p-10">
+                <p class="text-xl text-gray-300 leading-relaxed">
+                    Dynamic Marketing Consultant with over 13 years of experience driving business growth and enhancing marketing strategies across multiple sectors. Expertise in business development, campaign management, and fostering strong relationships with partners and clients. Proven ability to elevate brand visibility and strategy through targeted outreach.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-16 flex items-center gap-4">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Work Experience</span>
+            </h2>
+            
+            <div class="space-y-10" id="experience-list"></div>
+        </div>
+    </section>
+
+    <section class="py-32 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-16 flex items-center gap-4">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Skills</span>
+            </h2>
+            <div class="flex flex-wrap gap-4" id="skills-list"></div>
+        </div>
+    </section>
+
+    <section class="py-32 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-16 flex items-center gap-4">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Education</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-10">
+                    <h3 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mb-3">
+                        University of California, Santa Barbara
+                    </h3>
+                    <p class="text-xl text-gray-300 mb-2">Bachelor's in Communication</p>
+                    <p class="text-lg text-purple-400">2010-2012</p>
+                </div>
+                <div class="card p-10">
+                    <h3 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mb-3">
+                        College of the Canyons
+                    </h3>
+                    <p class="text-lg text-purple-400">2008-2010</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 relative bg-slate-900/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-16 text-center">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Contact Me</span>
+            </h2>
+            
+            <div class="max-w-2xl mx-auto">
+                <form id="contact-form" class="card p-10 space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg font-semibold text-gray-300 mb-2">Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required
+                            class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 text-white transition-all"
+                            placeholder="Your name"
+                        >
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-lg font-semibold text-gray-300 mb-2">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 text-white transition-all"
+                            placeholder="your.email@example.com"
+                        >
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-lg font-semibold text-gray-300 mb-2">Subject</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            required
+                            class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 text-white transition-all"
+                            placeholder="What's this about?"
+                        >
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-lg font-semibold text-gray-300 mb-2">Message</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            required
+                            rows="6"
+                            class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 text-white transition-all resize-none"
+                            placeholder="Tell me about your project or inquiry..."
+                        ></textarea>
+                    </div>
+                    
+                    <button 
+                        type="submit"
+                        class="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg text-xl font-semibold hover:scale-105 transition-transform shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/70"
+                    >
+                        Send Message
+                    </button>
+                    
+                    <div id="form-status" class="text-center text-lg font-semibold hidden"></div>
+                </form>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-gray-400 mb-4">Or reach out directly:</p>
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="mailto:dshonobrien@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">
+                            dshonobrien@gmail.com
+                        </a>
+                        <a href="tel:+3232709810" class="text-blue-400 hover:text-blue-300 transition-colors">
+                            +323-270-9810
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 text-center border-t border-slate-800">
+        <p class="text-gray-400 text-lg">© 2026 Daron O'Brien. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var experience = [
+            { title: 'Marketing Specialist', company: 'Life & Annuity Masters', period: '2020 - PRESENT', duties: ['Created marketing campaigns for both internal agency and external clients', 'Led backend support on company website re-design with SSO integration', 'Designed professional high-level marketing presentations', 'Encouraged sales and marketing relationships with partner agencies', 'Developed and maintained prospective case status reports'] },
+            { title: 'Marketing Specialist', company: 'FFP Insurance Services', period: '2017-2020', duties: ['Developed new business by recruiting new agents and growing existing agent groups', 'Assisted with life insurance illustrations and technical case design', 'Successfully built relationships with key producers', 'Improved customer campaign delivery with personalized targeting'] },
+            { title: 'Marketing Manager', company: 'Farmers Insurance Group', period: '2014-2017', duties: ['Maintained and grew individual sales revenue goals', 'Coordinated and executed local marketing efforts', 'Trained agencies in sales techniques and new products', 'Led prospecting efforts for new Property and Casualty business'] },
+            { title: 'Digital Marketing Manager', company: '360 Agency', period: '2012-2014', duties: ['Daily management of agency primary social media accounts', 'Established budgets and benchmarks for online campaigns', 'Created comprehensive action plans for targeted viewership', 'Developed editorial calendars to support client priorities'] }
+        ];
+        var skills = ['SQL', 'Public Relations', 'Teamwork', 'Time Management', 'Leadership', 'Effective Communication', 'Critical Thinking', 'Customer Service', 'Marketing Campaigns', 'Lead Generation', 'Social Media', 'Event Management', 'Hubspot', 'Excel', 'Email Marketing', 'Brand Management', 'SEO & SEM', 'Google Analytics'];
+        
+        var expList = document.getElementById('experience-list');
+        experience.forEach(function(job) {
+            var card = document.createElement('div');
+            card.className = 'card p-8';
+            var dutiesHTML = '';
+            job.duties.forEach(function(duty) { dutiesHTML += '<li class="flex items-start gap-3"><span class="text-blue-400 mt-1">▹</span><span class="text-lg">' + duty + '</span></li>'; });
+            card.innerHTML = '<div class="flex justify-between mb-6"><div><h3 class="text-3xl font-bold text-blue-400 mb-2">' + job.title + '</h3><p class="text-2xl text-gray-300">' + job.company + '</p></div><span class="text-lg text-purple-400 font-semibold">' + job.period + '</span></div><ul class="space-y-3 text-gray-300">' + dutiesHTML + '</ul>';
+            expList.appendChild(card);
+        });
+        
+        var skillsList = document.getElementById('skills-list');
+        skills.forEach(function(skill) { var tag = document.createElement('span'); tag.className = 'skill-tag'; tag.textContent = skill; skillsList.appendChild(tag); });
+        
+        document.addEventListener('mousemove', function(e) { var cursor = document.getElementById('cursor-follower'); cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
+        window.addEventListener('scroll', function() { var scrollY = window.scrollY; document.getElementById('bg-layer-1').style.transform = 'translateY(' + (scrollY * 0.5) + 'px)'; });
+        
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+            
+            var mailtoLink = 'mailto:dshonobrien@gmail.com' +
+                '?subject=' + encodeURIComponent(subject) +
+                '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+            
+            window.location.href = mailtoLink;
+            
+            var status = document.getElementById('form-status');
+            status.textContent = 'Opening your email client...';
+            status.className = 'text-center text-lg font-semibold text-blue-400';
+            status.classList.remove('hidden');
+            
+            setTimeout(function() {
+                status.classList.add('hidden');
+                document.getElementById('contact-form').reset();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
